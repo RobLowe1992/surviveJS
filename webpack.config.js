@@ -27,12 +27,8 @@ const common = merge(
     },
     output: {
       path: PATHS.build,
-      filename: '[name].js'
-      // TODO: Set publicPath to match your GitHub project name
-      // E.g., '/kanban-demo/'. Webpack will alter asset paths
-      // based on this. You can even use an absolute path here
-      // or even point to a CDN.
-      //publicPath: ''
+      filename: '[name].js',
+      publicPath: 'https://github.com/RobLowe1992/surviveJS.git'
     },
     resolve: {
       extensions: ['', '.js', '.jsx']
@@ -102,7 +98,7 @@ switch(TARGET) {
       parts.devServer({
         // Customize host/port here if needed
         host: process.env.HOST,
-        port: process.env.PORT,
+        port: 8081,
         poll: ENABLE_POLLING
       }),
       parts.enableReactPerformanceTools(),
